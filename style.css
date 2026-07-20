@@ -42,6 +42,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .brand-logo {
@@ -86,6 +87,16 @@ header {
     transform: translateY(-1px);
 }
 
+/* Hamburger Gumb */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: var(--olive-green);
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
@@ -98,7 +109,7 @@ header {
     padding: 0 1rem;
 }
 
-.hero-content max-width {
+.hero-content {
     max-width: 800px;
 }
 
@@ -297,16 +308,36 @@ footer p {
     font-size: 0.95rem;
 }
 
-/* Responsive design */
+/* Responsive design (Media Queries) */
 @media(max-width: 768px) {
-    .nav-links {
-        display: none; /* Za potrebe jednostavnosti u jednoj datoteci, može se doraditi mobilnim menijem */
+    .menu-toggle {
+        display: block;
     }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+        padding: 1.5rem 0;
+        text-align: center;
+        gap: 1.2rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
     .room-section, .room-section.reverse {
         grid-template-columns: 1fr;
         direction: ltr;
         gap: 2rem;
     }
+    
     .hero h1 {
         font-size: 2.3rem;
     }
