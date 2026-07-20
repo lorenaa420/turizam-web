@@ -11,7 +11,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 body {
@@ -87,7 +87,7 @@ header {
     transform: translateY(-1px);
 }
 
-/* Hamburger Gumb */
+/* Hamburger Gumb (Inicijalno skriven) */
 .menu-toggle {
     display: none;
     background: none;
@@ -308,16 +308,19 @@ footer p {
     font-size: 0.95rem;
 }
 
-/* Responsive design (Media Queries) */
+/* =========================================================
+   MOBILNI DIZAJN (Strogo unutar medijske opne za manje ekrane)
+   ========================================================= */
 @media(max-width: 768px) {
     .menu-toggle {
         display: block;
+        z-index: 1100;
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
-        position: absolute;
+        position: absolute; /* Vraćeno na absolute unutar headera da se spriječi dupliciranje cijelog layouta */
         top: 100%;
         left: 0;
         width: 100%;
@@ -326,6 +329,7 @@ footer p {
         padding: 1.5rem 0;
         text-align: center;
         gap: 1.2rem;
+        z-index: 1050;
     }
 
     .nav-links.active {
