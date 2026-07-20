@@ -1,0 +1,313 @@
+:root {
+    --bg-sand: #fbf9f5;
+    --olive-green: #4b5320;
+    --olive-light: #eef2e6;
+    --text-dark: #2c3028;
+    --white: #ffffff;
+    --accent: #c29b38;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif, system-ui;
+    background-color: var(--bg-sand);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, .brand-logo {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--olive-green);
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--olive-green);
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--olive-green);
+}
+
+.btn-primary {
+    background-color: var(--olive-green);
+    color: var(--white) !important;
+    padding: 0.7rem 1.4rem;
+    border-radius: 4px;
+    transition: var(--transition);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #3b4218;
+    transform: translateY(-1px);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 1rem;
+}
+
+.hero-content max-width {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* Page Headers */
+.page-header {
+    background-color: var(--olive-light);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Container & Sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* Accommodation / Rooms Layout */
+.room-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.room-section.reverse {
+    direction: rtl;
+}
+
+.room-section.reverse * {
+    direction: ltr;
+}
+
+.room-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.room-info ul {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.room-info li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.room-info li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--olive-green);
+    font-weight: bold;
+}
+
+/* Pricing Table */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.pricing-card {
+    background: var(--white);
+    border: 1px solid #e0dfd5;
+    border-radius: 8px;
+    padding: 2.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.pricing-card.featured {
+    border-color: var(--olive-green);
+    box-shadow: 0 10px 30px rgba(75, 83, 32, 0.1);
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--olive-green);
+    margin: 1.5rem 0;
+}
+
+/* Contact / Booking Form */
+.booking-wrapper {
+    background: var(--white);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: var(--bg-sand);
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--olive-green);
+}
+
+/* Footer */
+footer {
+    background-color: var(--olive-green);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 5rem;
+}
+
+footer p {
+    opacity: 0.85;
+    font-size: 0.95rem;
+}
+
+/* Responsive design */
+@media(max-width: 768px) {
+    .nav-links {
+        display: none; /* Za potrebe jednostavnosti u jednoj datoteci, može se doraditi mobilnim menijem */
+    }
+    .room-section, .room-section.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 2rem;
+    }
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+}
