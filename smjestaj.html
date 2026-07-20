@@ -12,6 +12,99 @@
     <header>
         <div class="nav-container">
             <a href="index.html" class="brand-logo">Olive Hill</a>
+            
+            <button class="menu-toggle" id="mobile-menu" aria-label="Otvori izbornik">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-list">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="smjestaj.html" class="active">Smještaj</a></li>
+                <li><a href="okolica.html">Okolica</a></li>
+                <li><a href="cjenik.html">Cjenik</a></li>
+                <li><a href="cjenik.html#kontakt" class="btn-primary">Rezervirajte direktno</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>Vila i interijer</h1>
+        <p>Spoj moderne estetike, udobnosti i tradicionalnih detalja</p>
+    </div>
+
+    <div class="container">
+        <!-- Dnevni boravak -->
+        <div class="room-section">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Dnevni boravak" class="room-img">
+            <div class="room-info">
+                <h2>Dnevni boravak</h2>
+                <p>Prostrani dnevni boravak ispunjen prirodnim svjetlom s udobnom garniturom, pametnim televizorom i kaminom za ugodne večeri.</p>
+                <ul>
+                    <li>Klima uređaj i podno grijanje</li>
+                    <li>Besplatni brzi Wi-Fi</li>
+                    <li>Izravan izlaz na sunčanu terasu</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Kuhinja i blagovaonica -->
+        <div class="room-section reverse">
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Kuhinja" class="room-img">
+            <div class="room-info">
+                <h2>Kuhinja i blagovaonica</h2>
+                <p>Potpuno opremljena moderna kuhinja zadovoljit će sve vaše kulinarske potrebe, bilo da pripremate brzi doručak ili gurmansku večeru.</p>
+                <ul>
+                    <li>Perilica posuđa, pećnica i indukcijska ploča</li>
+                    <li>Aparat za kavu i toster</li>
+                    <li>Prostrani stol za blagovanje</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Spavaće sobe -->
+        <div class="room-section">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Spavaća soba" class="room-img">
+            <div class="room-info">
+                <h2>Spavaće sobe</h2>
+                <p>Tri elegantno uređene spavaće sobe s ortopedskim madracima i luksuznom posteljinom osiguravaju miran i okrepljujući san.</p>
+                <ul>
+                    <li>Bračni kreveti dimenzija 180x200 cm</li>
+                    <li>Zatamnjujuće zavjese i klima u svakoj sobi</li>
+                    <li>Vlastite kupaonice uz svaku sobu (En-suite)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kuća za odmor Olive Hill. Sva prava pridržana.</p>
+    </footer>
+
+    <!-- JavaScript za mobilni meni -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smještaj - Kuća za odmor Olive Hill</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">Olive Hill</a>
             <ul class="nav-links">
                 <li><a href="index.html">Početna</a></li>
                 <li><a href="smjestaj.html" class="active">Smještaj</a></li>
