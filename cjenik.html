@@ -144,6 +144,142 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ 
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">Olive Hill</a>
+            
+            <button class="menu-toggle" id="mobile-menu" aria-label="Otvori izbornik">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-list">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="smjestaj.html">Smještaj</a></li>
+                <li><a href="okolica.html">Okolica</a></li>
+                <li><a href="cjenik.html" class="active">Cjenik</a></li>
+                <li><a href="#kontakt" class="btn-primary">Rezervirajte direktno</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>Cjenik i uvjeti boravka</h1>
+        <p>Garancija najbolje cijene – rezervirajte direktno bez posrednika i provizija</p>
+    </div>
+
+    <div class="container">
+        <!-- Cjenik kartice -->
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Predsezona / Postsezona</h3>
+                <p>01.04. – 31.05. & 01.10. – 31.10.</p>
+                <div class="price">220 € <span style="font-size: 1rem; font-weight: normal;">/ noć</span></div>
+                <ul style="list-style: none; text-align: left; margin-top: 1rem;">
+                    <li>Minimalni boravak: 3 noćenja</li>
+                    <li>Uključeno završno čišćenje</li>
+                    <li>Boravišna pristojba uračunata</li>
+                </ul>
+            </div>
+
+            <div class="pricing-card featured">
+                <div style="background: var(--olive-green); color: white; display: inline-block; padding: 0.2rem 0.8rem; font-size: 0.8rem; border-radius: 20px; margin-bottom: 0.5rem;">Najtraženije</div>
+                <h3>Glavna sezona</h3>
+                <p>01.06. – 30.09.</p>
+                <div class="price">380 € <span style="font-size: 1rem; font-weight: normal;">/ noć</span></div>
+                <ul style="list-style: none; text-align: left; margin-top: 1rem;">
+                    <li>Minimalni boravak: 7 noćenja</li>
+                    <li>Korištenje bazena i sadržaja</li>
+                    <li>Besplatan parking i Wi-Fi</li>
+                </ul>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Zimska sezona</h3>
+                <p>01.11. – 31.03.</p>
+                <div class="price">180 € <span style="font-size: 1rem; font-weight: normal;">/ noć</span></div>
+                <ul style="list-style: none; text-align: left; margin-top: 1rem;">
+                    <li>Minimalni boravak: 2 noćenja</li>
+                    <li>Uključeno grijanje i kamin</li>
+                    <li>Mogućnost dogovora dužeg boravka</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Direktna rezervacijska forma -->
+        <div id="kontakt" class="booking-wrapper">
+            <h2 style="text-align: center; margin-bottom: 0.5rem;">Direktni upit i rezervacija</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem;">Pošaljite nam upit bez obveze, odgovaramo u roku od par sati.</p>
+            
+            <form action="#" method="POST">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="ime">Ime i prezime</label>
+                        <input type="text" id="ime" name="ime" required placeholder="Vaše ime">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail adresa</label>
+                        <input type="email" id="email" name="email" required placeholder="vas@email.com">
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label for="dolazak">Datum dolaska</label>
+                        <input type="date" id="dolazak" name="dolazak" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="odlazak">Datum odlaska</label>
+                        <input type="date" id="odlazak" name="odlazak" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="gosti">Broj gostiju</label>
+                    <select id="gosti" name="gosti">
+                        <option value="1">1 osoba</option>
+                        <option value="2">2 osobe</option>
+                        <option value="3">3 osobe</option>
+                        <option value="4">4 osobe</option>
+                        <option value="5+">5 ili više osoba</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="poruka">Napomena ili posebni zahtjevi</label>
+                    <textarea id="poruka" name="poruka" rows="4" placeholder="Unesite dodatne detalje..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer; font-size: 1rem; padding: 1rem;">Pošaljite direktan upit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kuća za odmor Olive Hill. Sva prava pridržana.</p>
+    </footer>
+
+    <!-- JavaScript za mobilni meni -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cjenik i rezervacije - Kuća za odmor Olive Hill</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
     <header>
         <div class="nav-container">
