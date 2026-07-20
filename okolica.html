@@ -77,13 +77,22 @@
         <p>&copy; 2026 Kuća za odmor Olive Hill. Sva prava pridržana.</p>
     </footer>
 
-    <!-- JavaScript za mobilni meni -->
+<!-- JavaScript za mobilni meni -->
     <script>
         const mobileMenu = document.getElementById('mobile-menu');
         const navList = document.getElementById('nav-list');
+        const navLinks = document.querySelectorAll('.nav-links a');
 
+        // Otvaranje / zatvaranje menija na klik hamburgera
         mobileMenu.addEventListener('click', () => {
             navList.classList.toggle('active');
+        });
+
+        // Zatvaranje menija nakon klika na bilo koju poveznicu
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+            });
         });
     </script>
 
